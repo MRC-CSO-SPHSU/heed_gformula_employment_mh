@@ -132,8 +132,8 @@ wide_data <- long_data |>
     log_income
   )
 
-# wide_mids <- mice::mice(wide_data, defaultMethod = c("norm", "logreg", "pmm", "pmm"), m = 35, maxit = 10)
-wide_mids <- readRDS(here::here("data", "wide_mids.rds"))
+wide_mids <- mice::mice(wide_data, defaultMethod = c("norm", "logreg", "pmm", "pmm"), m = 35, maxit = 10)
+# wide_mids <- readRDS(here::here("data", "wide_mids.rds"))
 
 base_predictor_matrix <- make_predictor_matrix(wide_data)
 
